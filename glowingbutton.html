@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>glowing movabale button</title>
+</head>
+<style>
+	body{
+		background: black;
+	}
+	.button{
+		justify-content: center;display: flex;align-items: center;min-height: 100vh;
+	}
+	input{
+		background: rgb(8,8,8);position: relative;-webkit-appearance:none;
+		width: 340px;height: 140px;border-radius: 80px;border: 20px solid rgb(16,16,16);cursor: pointer;outline: none; /*this outline none command is used to hide the outline*/
+	}
+    input:before{content: '';background: rgb(16,16,16)
+;position: absolute;
+    	width: 200px;height: 96px;border-radius: 80px;top:0px;border: 2px solid black;box-shadow: 30px 20px 40px   black inset;/*animation: animate 2s linear;*/
+    }
+    input:after{
+    	content: '';position: absolute;width:15px;height: 15px;background: black;border-radius: 50%;border: 2px solid rgb(28,8,8);right:114px;top: 40px;
+    }
+    input:checked:before{
+    	left: 98px;
+    }
+    input:checked:after{
+    	left: 265px;background: #63cdff;
+    }
+    input:checked{
+    	background: linear-gradient(0deg,#6dd1ff,#20b7ff);
+    }
+	
+	/*@keyframes animate{
+		0%{
+			left: 0px;
+		}                       no need of animation 
+		50%{
+			left: 98px;
+		}
+		100%{
+			left: 0px;
+		}
+	} */
+</style>
+<body>
+	<div class="button">
+		<input type="checkbox" name="">
+	</div>
+
+</body>
+</html>
